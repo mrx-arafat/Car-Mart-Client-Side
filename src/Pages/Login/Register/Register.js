@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import login from "../../../images/login.png";
+import login from "../../../images/login.jpg";
 import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
@@ -96,7 +96,7 @@ const Register = () => {
           )}
           {authError && <Alert severity="error">{authError}</Alert>}
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sx={{ mt: 5 }}>
           <img style={{ width: "100%" }} src={login} alt="" />
         </Grid>
       </Grid>

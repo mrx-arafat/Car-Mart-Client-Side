@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import login from "../../../images/login.png";
+import login from "../../../images/login.jpg";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -73,7 +73,7 @@ const Login = () => {
               Login
             </Button>
             <NavLink style={{ textDecoration: "none" }} to="/register">
-              <Button variant="text">New User? Please Register</Button>
+              <Button variant="text">New to CMart? Please Register</Button>
             </NavLink>
 
             {isLoading && <CircularProgress />}
@@ -84,12 +84,21 @@ const Login = () => {
           </form>
 
           <p>------------------------</p>
-          <Button onClick={handleGoogleSignIn} variant="contained">
-            Google Sign In
+          <Button
+            onClick={handleGoogleSignIn}
+            variant="contained"
+            color="warning"
+            sx={{ boxShadow: 2 }}
+          >
+            Sign In With Google
           </Button>
         </Grid>
         <Grid item xs={12} md={6}>
-          <img style={{ width: "100%" }} src={login} alt="" />
+          <img
+            style={{ width: "100%", marginTop: "50px" }}
+            src={login}
+            alt=""
+          />
         </Grid>
       </Grid>
     </Container>

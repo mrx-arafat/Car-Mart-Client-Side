@@ -16,7 +16,6 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Switch>
-            {" "}
             <PrivateRoute path="/carcollection">
               <CarCollection></CarCollection>
             </PrivateRoute>
