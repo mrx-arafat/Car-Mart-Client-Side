@@ -16,9 +16,12 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Switch>
-            <PrivateRoute path="/carcollection">
-              <CarCollection></CarCollection>
+            <PrivateRoute path="/order">
+              <Order></Order>
             </PrivateRoute>
+            <Route path="/carcollection">
+              <CarCollection></CarCollection>
+            </Route>
             <Route path="/home">
               <Home></Home>
             </Route>

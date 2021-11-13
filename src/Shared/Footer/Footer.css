@@ -1,8 +1,6 @@
 body {
-  background-color: #f3f6fd;
   font-size: 15px;
   font-weight: bold;
-  color: rgb(80, 74, 74);
 }
 
 ul {
@@ -11,13 +9,13 @@ ul {
   padding: 0;
 }
 
-ul > li {
+ul li {
   padding: 4px;
-  color: #c5cae9;
+  color: #24294d;
 }
 
-ul > li:hover {
-  color: #957bda;
+ul li:hover {
+  color: #131313;
   cursor: pointer;
 }
 
@@ -29,13 +27,13 @@ hr {
   padding: 2% 7%;
 }
 
-.social > i {
+.social i {
   padding: 1%;
   font-size: 15px;
 }
 
-.social > i:hover {
-  color: #957bda;
+.social i:hover {
+  color: #000000;
   cursor: pointer;
 }
 

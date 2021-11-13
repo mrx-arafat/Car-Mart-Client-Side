@@ -6,32 +6,54 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Navigation = () => {
+  const { user, logout } = useAuth();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <NavLink to="/home">
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </NavLink>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Car Mart
+            Cars Mart
           </Typography>
-          <Link to="/carcollection">
-            {" "}
-            <Button variant="text" color="secondary">
-              Car Collection
+
+          <NavLink
+            style={{
+              textDecoration: "none",
+              color: "white",
+              padding: "6px 8px",
+            }}
+            to="/carcollection"
+          >
+            Cars Collection
+          </NavLink>
+          {user?.email ? (
+            <Button onClick={logout} color="inherit">
+              LogOut
             </Button>
-          </Link>
-          <Button color="inherit">Login</Button>
+          ) : (
+            <NavLink
+              style={{ textDecoration: "none", color: "white" }}
+              to="/login"
+            >
+              <Button color="inherit">Login</Button>
+            </NavLink>
+          )}
         </Toolbar>
       </AppBar>
     </Box>

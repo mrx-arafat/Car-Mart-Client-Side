@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div class="container-fluid mt-5">
-      <div class="card bg-white mx-5">
+      <div class="card bg-white ">
         <div class="row mb-4">
           <div class="col-md-4 col-sm-4 col-xs-4">
             <div class="footer-text pull-left">
@@ -12,23 +12,23 @@ const Footer = () => {
                 <h1>Mart</h1>
               </div>
               <p class="card-text">
-                mara khau ektu tahole valo developer hote parba
+                mara khai ektu tahole valo developer hote parbo
               </p>
             </div>
           </div>
           <div class="col-md-2 col-sm-2 col-xs-2"></div>
           <div class="col-md-2 col-sm-2 col-xs-2">
-            <h5 class="heading">Services</h5>
+            <h5 class="heading">Our Services</h5>
             <ul>
-              <li>IT Consulting</li>
-              <li>Development</li>
-              <li>Cloud</li>
+              <li>maintenance</li>
+              <li>Tool Replace</li>
+              <li>Repair</li>
               <li>Support</li>
             </ul>
           </div>
 
           <div class="col-md-2 col-sm-2 col-xs-2">
-            <h5 class="heading">Company</h5>
+            <h5 class="heading">Explore Us</h5>
             <ul class="card-text">
               <li>About Us</li>
               <li>Blog</li>
@@ -42,7 +42,8 @@ const Footer = () => {
           <div class="col-md-6 col-sm-6 col-xs-6">
             <div class="pull-left">
               <p>
-                <i class="fa fa-copyright"></i> copyright 2021 &copy; Arafat
+                <i class="fa fa-copyright"></i> copyright 2021 &copy; Easin
+                Arafat
               </p>
             </div>
           </div>

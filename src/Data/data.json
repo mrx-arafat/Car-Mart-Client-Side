@@ -28,5 +28,11 @@
     "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
     "price": "$55000",
     "img": "https://cdn.carbuzz.com/gallery-images/1600/807000/400/807466.jpg"
+  },
+  {
+    "name": "BMW 8 Series",
+    "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
+    "price": "$90000",
+    "img": "https://imgd.aeplcdn.com/664x374/cw/ec/41406/BMW-8-Series-Front-view-164822.jpg"
   }
 ]

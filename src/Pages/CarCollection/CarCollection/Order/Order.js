@@ -1,7 +1,11 @@
 import React from "react";
 
 const Order = () => {
-  return <div>hey order now</div>;
+  return (
+    <div>
+      <h2>order dau</h2>
+    </div>
+  );
 };
 
 export default Order;
