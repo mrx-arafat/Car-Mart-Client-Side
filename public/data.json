@@ -6,10 +6,22 @@
     "img": "https://i.ibb.co/hYs1SHj/car-1.jpg"
   },
   {
+    "name": "Kia Seltos",
+    "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
+    "price": "$25500",
+    "img": "https://imgd.aeplcdn.com/664x374/n/cw/ec/33372/seltos-exterior-right-front-three-quarter-3.jpeg?q=85"
+  },
+  {
     "name": "Hyundai Santa",
     "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
     "price": "$31500",
-    "img": "https://i.ndtvimg.com/i/2018-02/2019-hyundai-santa-fe_827x510_41519286657.jpg"
+    "img": "https://i.ibb.co/hYs1SHj/car-1.jpghttps://i.ibb.co/2KV0p0V/2021-hyundai-santa-fe-100764926-h.jpg"
+  },
+  {
+    "name": "Jaguar XF",
+    "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
+    "price": "$55500",
+    "img": "https://imgd.aeplcdn.com/664x374/n/cw/ec/19826/xf-exterior-right-front-three-quarter.jpeg"
   },
   {
     "name": "2021 Ford Mustang",

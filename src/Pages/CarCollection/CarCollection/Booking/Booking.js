@@ -1,7 +1,7 @@
 import React from "react";
 
 const Booking = () => {
-  return <div>booking</div>;
+  return <div>this is booking page </div>;
 };
 
 export default Booking;
