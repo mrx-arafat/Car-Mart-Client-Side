@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Service.css";
 
 // all data are showing for services page
@@ -14,7 +15,11 @@ const service = (props) => {
       <small className="p-3 fw-bold">{title}</small>
       <h3 className="p-3 text-danger">{price}</h3>
 
-      <button className="btn btn-danger text-white mb-4">Pre Order Now</button>
+      <Link to="/pre-order">
+        <button className="btn btn-danger text-white mb-4">
+          Pre Order Now
+        </button>
+      </Link>
     </div>
   );
 };
