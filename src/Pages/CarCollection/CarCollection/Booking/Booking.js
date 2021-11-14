@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Avatar, CardMedia, Grid } from "@mui/material";
 import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import BookingModal from "../BookingModal/BookingModal";
 
 const Booking = ({ booking, date }) => {
-  const { name, time, space } = booking;
+  const { name, time, price, space, img, description } = booking;
   const [openBooking, setBookingOpen] = React.useState(false);
   const handleBookingOpen = () => setBookingOpen(true);
   const handleBookingClose = () => setBookingOpen(false);
@@ -22,14 +22,30 @@ const Booking = ({ booking, date }) => {
           >
             {name}
           </Typography>
+
+          <Avatar
+            variant={"rounded"}
+            alt="The image"
+            src={img}
+            style={{
+              width: 300,
+              height: 200,
+              display: "block",
+              margin: "10px auto",
+            }}
+          />
+
+          {/* <Typography variant="h6" gutterBottom component="div">
+            {pain}
+          </Typography> */}
           <Typography variant="h6" gutterBottom component="div">
-            {time}
+            {price}
           </Typography>
           <Typography variant="caption" display="block" gutterBottom>
             {space} STOCK AVAILABLE
           </Typography>
           <Button onClick={handleBookingOpen} variant="contained">
-            BOOK APPOINTMENT
+            Pre Order Now
           </Button>
         </Paper>
       </Grid>

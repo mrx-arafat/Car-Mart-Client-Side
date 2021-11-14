@@ -9,6 +9,7 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import PreOrder from "./Pages/CarCollection/CarCollection/PreOrder/PreOrder";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Switch>
+            <PrivateRoute path="/pre-order">
+              <PreOrder></PreOrder>
+            </PrivateRoute>
             <PrivateRoute path="/order">
               <Order></Order>
             </PrivateRoute>

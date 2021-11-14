@@ -8,7 +8,7 @@ const CarCollection = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <AvailableCars></AvailableCars>
+      <Services></Services>
       <Footer></Footer>
     </div>
   );
