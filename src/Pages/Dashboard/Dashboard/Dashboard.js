@@ -7,7 +7,7 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -16,6 +16,8 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { Grid } from "@mui/material";
+import Orders from "../Orders/Orders";
 
 const drawerWidth = 200;
 
@@ -120,7 +122,22 @@ function Dashboard(props) {
         }}
       >
         <Toolbar />
-        <Typography paragraph>Arafat will write here</Typography>
+        <Typography paragraph>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              p: 3,
+            }}
+          >
+            <Grid item xs={4}>
+              <h2>left side</h2>
+            </Grid>
+            <Grid item xs={8}>
+              <Orders></Orders>
+            </Grid>
+          </Grid>
+        </Typography>
       </Box>
     </Box>
   );
