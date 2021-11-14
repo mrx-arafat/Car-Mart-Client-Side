@@ -94,11 +94,11 @@ const useFirebase = () => {
       })
       .finally(() => setIsLoading(false));
   };
-  //Admin  const [admin,setAdmin]=useState(false)
+  //setAdmin  const [admin,setAdmin]=useState(false)
   useEffect(() => {
     fetch(`http://localhost:5000/users/${user.email}`)
       .then((res) => res.json())
-      .then((data) => setAdmin(data));
+      .then((data) => setAdmin(data.admin));
   }, [user.email]);
 
   //log out
