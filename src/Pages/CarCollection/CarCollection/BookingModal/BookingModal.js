@@ -23,13 +23,13 @@ const BookingModal = ({
   openBooking,
   handleBookingClose,
   booking,
-  date,
+
   setBookingSuccess,
 }) => {
   const { name, time, price } = booking;
   const { user } = useAuth();
   const initialInfo = {
-    patientName: user.displayName,
+    customerName: user.displayName,
     email: user.email,
     phone: "",
   };
@@ -41,25 +41,26 @@ const BookingModal = ({
     const newInfo = { ...bookingInfo };
     newInfo[field] = value;
 
-    console.log(newInfo);
+    // console.log(newInfo);
     setBookingInfo(newInfo);
   };
 
   const handleBookingSubmit = (e) => {
     // collect data
-    const appointment = {
+    const order = {
       ...bookingInfo,
-      time,
+
       price,
       serviceName: name,
     };
+    console.log(order);
     // send to the server
-    fetch("http://localhost:5000/appointments", {
+    fetch("http://localhost:5000/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(appointment),
+      body: JSON.stringify(order),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -97,7 +98,7 @@ const BookingModal = ({
             <TextField
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
-              name="patientName"
+              name="customerName"
               onBlur={handleOnBlur}
               defaultValue={user.displayName}
               size="small"
