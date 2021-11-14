@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import BookingModal from "../BookingModal/BookingModal";
 
 const Booking = ({ booking, setBookingSuccess }) => {
-  const { name, price, img, description } = booking;
+  const { name, price, img } = booking;
   const [openBooking, setBookingOpen] = React.useState(false);
   const handleBookingOpen = () => setBookingOpen(true);
   const handleBookingClose = () => setBookingOpen(false);

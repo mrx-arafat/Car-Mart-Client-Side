@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   updateProfile,
+  getIdToken,
 } from "firebase/auth";
 // initialize firebase app
 initializeFirebase();
@@ -19,7 +20,7 @@ const useFirebase = () => {
   const [authError, setAuthError] = useState("");
 
   const [admin, setAdmin] = useState(false);
-
+  const [token, setToken] = useState("");
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
@@ -68,6 +69,10 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        getIdToken(user).then((idToken) => {
+          setToken(idToken);
+          //local storage e store hobe in future
+        });
       } else {
         setUser({});
       }
@@ -129,6 +134,7 @@ const useFirebase = () => {
 
   return {
     user,
+    token,
     admin,
     isLoading,
     authError,
