@@ -1,4 +1,14 @@
 import * as React from "react";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch,
+} from "react-router-dom";
+
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -7,7 +17,7 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-
+import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -16,15 +26,17 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
-import Orders from "../Orders/Orders";
+
+import DashboardHome from "../DashboardHome/DashboardHome";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import AddService from "../AddService/AddService";
 
 const drawerWidth = 200;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -33,6 +45,16 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
+
+      <Link to={`${url}`}>
+        <Button variant="text">Dashboard</Button>
+      </Link>
+      <Link to={`${url}/makeAdmin`}>
+        <Button variant="text">Make Admin</Button>
+      </Link>
+      <Link to={`${url}/addService`}>
+        <Button variant="text">Add Service</Button>
+      </Link>
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
@@ -122,22 +144,17 @@ function Dashboard(props) {
         }}
       >
         <Toolbar />
-        <Typography paragraph>
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              p: 3,
-            }}
-          >
-            <Grid item xs={4}>
-              <h2>left side</h2>
-            </Grid>
-            <Grid item xs={8}>
-              <Orders></Orders>
-            </Grid>
-          </Grid>
-        </Typography>
+        <Switch>
+          <Route exact path={path}>
+            <DashboardHome></DashboardHome>
+          </Route>
+          <Route path={`${path}/makeAdmin`}>
+            <MakeAdmin></MakeAdmin>
+          </Route>
+          <Route path={`${path}/addService`}>
+            <AddService></AddService>
+          </Route>
+        </Switch>
       </Box>
     </Box>
   );
