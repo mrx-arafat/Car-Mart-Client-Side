@@ -28,7 +28,7 @@ const Orders = () => {
 
   return (
     <div>
-      <h2>Orders Of {user.displayName}</h2>
+      <h2>Ordered By : {user.displayName}</h2>
 
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="orders table">

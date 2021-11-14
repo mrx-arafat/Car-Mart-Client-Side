@@ -30,6 +30,8 @@ import Typography from "@mui/material/Typography";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AddService from "../AddService/AddService";
+import useAuth from "../../../hooks/useAuth";
+import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 
 const drawerWidth = 200;
 
@@ -37,6 +39,9 @@ function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
+
+  const { admin } = useAuth();
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -49,12 +54,17 @@ function Dashboard(props) {
       <Link to={`${url}`}>
         <Button variant="text">Dashboard</Button>
       </Link>
-      <Link to={`${url}/makeAdmin`}>
-        <Button variant="text">Make Admin</Button>
-      </Link>
-      <Link to={`${url}/addService`}>
-        <Button variant="text">Add Service</Button>
-      </Link>
+      {/* but not working */}
+      {admin && (
+        <Box>
+          <Link to={`${url}/makeAdmin`}>
+            <Button variant="text">Make Admin</Button>
+          </Link>
+          <Link to={`${url}/addService`}>
+            <Button variant="text">Add Service</Button>
+          </Link>
+        </Box>
+      )}
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
@@ -148,12 +158,13 @@ function Dashboard(props) {
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
           </Route>
-          <Route path={`${path}/makeAdmin`}>
+
+          <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
-          </Route>
-          <Route path={`${path}/addService`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/addService`}>
             <AddService></AddService>
-          </Route>
+          </AdminRoute>
         </Switch>
       </Box>
     </Box>

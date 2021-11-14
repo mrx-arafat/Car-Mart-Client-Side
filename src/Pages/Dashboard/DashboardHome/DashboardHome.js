@@ -1,6 +1,11 @@
-import { Grid } from "@mui/material";
+import { Avatar, Grid, Typography } from "@mui/material";
 import React from "react";
+import Button from "@mui/material/Button";
+
+import SendIcon from "@mui/icons-material/Send";
 import Orders from "../Orders/Orders";
+import img from "../../../images/car-cartoon.jpg";
+import { NavLink } from "react-router-dom";
 
 const DashboardHome = () => {
   return (
@@ -12,7 +17,25 @@ const DashboardHome = () => {
       }}
     >
       <Grid item xs={4}>
-        <h2>left side</h2>
+        <Typography variant="button" display="block" gutterBottom>
+          Welcome To Dashboard
+        </Typography>
+        <Avatar
+          variant={"rounded"}
+          alt="The image"
+          src={img}
+          style={{
+            width: 300,
+            height: 200,
+            display: "block",
+            margin: "10px auto",
+          }}
+        />
+        <NavLink to="/">
+          <Button variant="contained" endIcon={<SendIcon />}>
+            Back To Homepage
+          </Button>
+        </NavLink>
       </Grid>
       <Grid item xs={8}>
         <Orders></Orders>
