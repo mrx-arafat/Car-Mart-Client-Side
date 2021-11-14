@@ -5,12 +5,6 @@ import Booking from "../Booking/Booking";
 const bookings = [
   {
     id: 1,
-    name: "Teeth Orthodonics",
-    time: "08.00 AM - 09.00 AM",
-    space: 10,
-  },
-  {
-    id: 1,
     name: "TOYOTA PRIUS SPECS",
     description:
       "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
