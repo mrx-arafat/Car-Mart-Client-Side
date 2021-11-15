@@ -16,7 +16,7 @@ const DashboardHome = () => {
         p: 3,
       }}
     >
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <Typography variant="button" display="block" gutterBottom>
           Welcome To Dashboard
         </Typography>
@@ -32,12 +32,17 @@ const DashboardHome = () => {
           }}
         />
         <NavLink to="/">
+          <Button variant="contained" sx={{ mx: 3 }} endIcon={<SendIcon />}>
+            Homepage
+          </Button>
+        </NavLink>
+        <NavLink to="/carcollection">
           <Button variant="contained" endIcon={<SendIcon />}>
-            Back To Homepage
+            Cars
           </Button>
         </NavLink>
       </Grid>
-      <Grid item xs={8}>
+      <Grid item xs={12} md={8}>
         <Orders></Orders>
       </Grid>
     </Grid>

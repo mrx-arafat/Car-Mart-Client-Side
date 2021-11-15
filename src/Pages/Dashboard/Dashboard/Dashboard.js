@@ -7,6 +7,7 @@ import {
   Link,
   useParams,
   useRouteMatch,
+  NavLink,
 } from "react-router-dom";
 
 import PropTypes from "prop-types";
@@ -22,6 +23,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import HomeIcon from "@mui/icons-material/Home";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
@@ -32,6 +34,7 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AddService from "../AddService/AddService";
 import useAuth from "../../../hooks/useAuth";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+import AddReview from "../AddReview/AddReview";
 
 const drawerWidth = 200;
 
@@ -53,6 +56,9 @@ function Dashboard(props) {
 
       <Link to={`${url}`}>
         <Button variant="text">Dashboard</Button>
+      </Link>
+      <Link to={`${url}/addReview`}>
+        <Button variant="text">Review Now</Button>
       </Link>
       {/* but not working */}
       {admin && (
@@ -102,6 +108,18 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
+          {/* button to go home */}
+          <NavLink to="/home" style={{ color: "white" }}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ float: "right" }}
+            >
+              <HomeIcon />
+            </IconButton>
+          </NavLink>
           <Typography variant="h6" noWrap component="div">
             Dashboard
           </Typography>
@@ -157,6 +175,9 @@ function Dashboard(props) {
         <Switch>
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
+          </Route>
+          <Route path={`${path}/addReview`}>
+            <AddReview></AddReview>
           </Route>
 
           <AdminRoute path={`${path}/makeAdmin`}>
