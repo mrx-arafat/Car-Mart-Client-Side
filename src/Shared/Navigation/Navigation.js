@@ -12,11 +12,16 @@ import useAuth from "../../hooks/useAuth";
 const Navigation = () => {
   const { user, logout } = useAuth();
 
+  const styles = {
+    button: { margin: 15 },
+    appBarBackground: { background: "#2E3B55" },
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" style={styles.appBarBackground}>
         <Toolbar>
-          <NavLink to="/home">
+          <NavLink to="/home" style={{ color: "white" }}>
             <IconButton
               size="large"
               edge="start"
