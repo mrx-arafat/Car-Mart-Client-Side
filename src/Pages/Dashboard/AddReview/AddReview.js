@@ -25,7 +25,12 @@ const AddReview = () => {
       <h1>Add Your Valueable Review</h1>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("firstName")} placeholder="Your Name" /> <br />
+        <input
+          {...register("firstName")}
+          placeholder="Full Name"
+          defaultValue={user.displayName}
+        />{" "}
+        <br />
         <input
           {...register("description")}
           placeholder="Send Your Thought"
@@ -36,6 +41,7 @@ const AddReview = () => {
           placeholder="Rate in 5"
         />
         {errors.rating && <p>Please Rate in 5</p>}
+        <br />
         <br />
         <input type="submit" />
       </form>
