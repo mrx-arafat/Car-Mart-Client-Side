@@ -7,7 +7,7 @@ const AvailableCars = ({ date }) => {
   const [bookings, setBookings] = useState([]);
   const [bookingSuccess, setBookingSuccess] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://radiant-shelf-17408.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);

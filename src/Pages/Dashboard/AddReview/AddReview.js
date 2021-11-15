@@ -12,12 +12,14 @@ const AddReview = () => {
   const { user } = useAuth();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Review Added successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://radiant-shelf-17408.herokuapp.com/reviews", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Review Added successfully");
+          reset();
+        }
+      });
   };
 
   return (

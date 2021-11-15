@@ -55,7 +55,7 @@ const BookingModal = ({
     };
     console.log(order);
     // send to the server
-    fetch("http://localhost:5000/orders", {
+    fetch("https://radiant-shelf-17408.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

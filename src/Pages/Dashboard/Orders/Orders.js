@@ -19,7 +19,7 @@ const Orders = () => {
   //for data load
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders?email=${user.email}`;
+    const url = `https://radiant-shelf-17408.herokuapp.com/orders?email=${user.email}`;
 
     fetch(url)
       .then((res) => res.json())
