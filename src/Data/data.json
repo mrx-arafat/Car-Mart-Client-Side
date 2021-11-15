@@ -1,15 +1,15 @@
 [
   {
-    "name": "TOYOTA PRIUS SPECS",
+    "name": "Mazda MX-5 Miata",
     "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
-    "price": "$21500",
-    "img": "https://i.ibb.co/hYs1SHj/car-1.jpg"
+    "price": "$15500",
+    "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-mazda-mx-5-miata-mmp-1-1593459650.jpg"
   },
   {
-    "name": "Kia Seltos",
+    "name": "Chevy Camaro",
     "description": "The Petrol engine is 1798 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Prius has a mileage of 26.27 kmpl & Ground clearance of Prius is 135mm. The Prius is a 5 seater 4 cylinder car and has length of 4540mm, width of 1760mm and a wheelbase of 2700m",
-    "price": "$25500",
-    "img": "https://imgd.aeplcdn.com/664x374/n/cw/ec/33372/seltos-exterior-right-front-three-quarter-3.jpeg?q=85"
+    "price": "$35500",
+    "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-chevrolet-camarors-010-1552656600.jpg?crop=0.745xw:0.680xh;0.148xw,0.155xh&resize=980:*"
   },
   {
     "name": "Hyundai Santa",
