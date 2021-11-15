@@ -11,6 +11,7 @@ import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import PreOrder from "./Pages/CarCollection/CarCollection/PreOrder/PreOrder";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/carcollection">
               <CarCollection></CarCollection>
             </Route>
+
             <Route path="/home">
               <Home></Home>
             </Route>
@@ -41,6 +43,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </BrowserRouter>

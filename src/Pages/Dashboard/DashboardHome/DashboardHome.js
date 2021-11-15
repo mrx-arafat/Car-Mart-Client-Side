@@ -34,7 +34,7 @@ const DashboardHome = () => {
 
         <NavLink to="/carcollection">
           <Button variant="contained" endIcon={<SendIcon />}>
-            Cars carcollection
+            Cars Collection
           </Button>
         </NavLink>
       </Grid>

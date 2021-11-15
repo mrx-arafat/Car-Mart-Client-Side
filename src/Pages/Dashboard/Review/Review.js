@@ -14,7 +14,12 @@ const Review = () => {
 
   return (
     <Container>
-      <Typography variant="h6" noWrap component="div">
+      <Typography
+        style={{ color: "#DD0148", margin: "20px auto" }}
+        variant="h6"
+        noWrap
+        component="div"
+      >
         Clients Reviews
       </Typography>
       <Grid container spacing={2} sx={{ pb: 4 }}>

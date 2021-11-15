@@ -45,7 +45,7 @@ function Dashboard(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
 
-  const { admin } = useAuth();
+  const { admin, user, logout } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -79,16 +79,9 @@ function Dashboard(props) {
           </Link>
         </Box>
       )}
-      <List>
-        {["LogOut"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              <LogoutIcon />
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <Button onClick={logout} color="inherit">
+        <LogoutIcon /> LogOut
+      </Button>
       <Divider />
     </div>
   );
