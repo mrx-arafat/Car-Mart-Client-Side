@@ -24,7 +24,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
-
+import LogoutIcon from "@mui/icons-material/Logout";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -35,8 +35,10 @@ import AddService from "../AddService/AddService";
 import useAuth from "../../../hooks/useAuth";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import AddReview from "../AddReview/AddReview";
+import Orders from "../Orders/Orders";
+import Payment from "../Payment/Payment";
 
-const drawerWidth = 200;
+const drawerWidth = 160;
 
 function Dashboard(props) {
   const { window } = props;
@@ -53,9 +55,15 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-
       <Link to={`${url}`}>
         <Button variant="text">Dashboard</Button>
+      </Link>{" "}
+      <br />
+      <Link to={`${url}/payment`}>
+        <Button variant="text">Payment</Button>
+      </Link>
+      <Link to={`${url}/myOrder`}>
+        <Button variant="text">My Orders</Button>
       </Link>
       <Link to={`${url}/addReview`}>
         <Button variant="text">Review Now</Button>
@@ -72,10 +80,10 @@ function Dashboard(props) {
         </Box>
       )}
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["LogOut"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              <ArrowRightIcon />
+              <LogoutIcon />
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -175,6 +183,12 @@ function Dashboard(props) {
         <Switch>
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
+          </Route>
+          <Route path={`${path}/payment`}>
+            <Payment></Payment>
+          </Route>
+          <Route path={`${path}/myOrder`}>
+            <Orders></Orders>
           </Route>
           <Route path={`${path}/addReview`}>
             <AddReview></AddReview>
