@@ -31,14 +31,10 @@ const DashboardHome = () => {
             margin: "10px auto",
           }}
         />
-        <NavLink to="/">
-          <Button variant="contained" sx={{ mx: 3 }} endIcon={<SendIcon />}>
-            Homepage
-          </Button>
-        </NavLink>
+
         <NavLink to="/carcollection">
           <Button variant="contained" endIcon={<SendIcon />}>
-            Cars
+            Cars carcollection
           </Button>
         </NavLink>
       </Grid>
