@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, NavLink } from "react-router-dom";
+import PersonIcon from "@mui/icons-material/Person";
 import useAuth from "../../hooks/useAuth";
 
 const Navigation = () => {
@@ -56,7 +57,11 @@ const Navigation = () => {
                 <Button color="inherit">Dashboard</Button>
               </NavLink>
 
-              <Button onClick={logout} color="inherit">
+              <Button color="inherit">
+                {" "}
+                <PersonIcon /> {user.displayName}
+              </Button>
+              <Button onClick={logout} variant="outlined" color="inherit">
                 LogOut
               </Button>
             </Box>
